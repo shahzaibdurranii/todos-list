@@ -1,3 +1,4 @@
+/* General App and Background Styles */
 .App {
   text-align: center;
 }
@@ -11,35 +12,35 @@ body {
 }
 
 .blur-background {
-  backdrop-filter: blur(20px); 
-  background-color: rgba(255, 255, 255, 0.5); 
-  border-radius: 8px; 
-  padding: 20px; 
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  padding: 20px;
 }
 
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100vh; 
+  height: 100vh;
 }
 
 .main-content {
   flex: 1;
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
+
 .header-space {
-  
-  margin-bottom: 35px; 
+  margin-bottom: 35px;
 }
 
 .footer-space {
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
-
+/* Logo Animation */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -50,10 +51,8 @@ body {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-.navStyle{
-  background-color: rgb(10, 1, 26);
-  color: antiquewhite;
-}
+
+/* Header Styles */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -69,11 +68,110 @@ body {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Navbar Styles */
+.navbar-brand {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.heading {
+  position: absolute;
+  left: 60px;
+  top: 6px;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+/* Custom Toggler Icon */
+.navbar-toggler {
+  position: relative;
+  z-index: 1;
+}
+
+/* Centering Navbar Links */
+.navbar-nav {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+
+
+
+/* Navbar Styles */
+.navbar {
+  transition: max-height 0.3s ease; /* Smooth transition */
+  overflow: hidden; /* Hide overflowing content */
+  max-height: 60px; /* Default height */
+}
+
+.expanded {
+  max-height: 200px; /* Adjust this to accommodate the links */
+}
+
+.menu-links {
+  display: flex; /* Flex display to allow stacking */
+  flex-direction: column; /* Stack links vertically */
+  align-items: flex-end; /* Center links horizontally */
+  width: 100%; /* Full width */
+  transition: opacity 0.3s ease;
+  padding-right: 20px;
+}
+
+.show-menu {
+  display: flex; 
+
+}
+
+/* Custom Toggler Icon */
+.menu-toggler {
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+  outline: none; /* Remove focus outline */
+  cursor: pointer; /* Add pointer cursor */
+  margin: 5px 0; /* Add margin to separate from links */
+}
+
+.menu-toggler img {
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+}
+
+/* Centering Links Container */
+.container-fluid {
+  display: flex; /* Make the container flex */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center all items */
+}
+
+
+
+/* Responsive Display for Navbar Links */
+@media (min-width: 700px) {
+  .menu-toggler {
+    display: none; /* Hide the custom toggler button */
   }
-  to {
-    transform: rotate(360deg);
+
+  .menu-links {
+    display: flex !important; /* Always show links */
+    justify-content: center;
+  }
+}
+
+@media (max-width: 699px) {
+  .menu-links {
+    display: none; /* Hide links by default on small screens */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%;
+    text-align: center;
+  }
+
+  .show-menu {
+    display: flex; /* Show links when toggler is activated */
+  }
+
+  .menu-toggler {
+    display: inline-block; /* Show toggler on smaller screens */
+    margin-left: auto;
   }
 }

@@ -69,7 +69,7 @@ function App() {
     <Router>
       <div style={appStyle} className="app-container">
         <div className='header-space'>
-          <Header title="Title" searchBar={true} />
+          <Header/>
         </div>
         <div className="container blur-background my-8">
           <Routes>
