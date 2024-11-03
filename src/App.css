@@ -2,6 +2,44 @@
   text-align: center;
 }
 
+body {
+  background-image: url('./images/blue web bg.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.blur-background {
+  backdrop-filter: blur(20px); 
+  background-color: rgba(255, 255, 255, 0.5); 
+  border-radius: 8px; 
+  padding: 20px; 
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+}
+
+.main-content {
+  flex: 1;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px;
+}
+.header-space {
+  
+  margin-bottom: 35px; 
+}
+
+.footer-space {
+  margin-top: 20px; 
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -12,7 +50,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.navStyle{
+  background-color: rgb(10, 1, 26);
+  color: antiquewhite;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
