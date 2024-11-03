@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
 const AddTodo = (props) => {
@@ -8,6 +7,8 @@ const AddTodo = (props) => {
   const [title,setTitle] = useState('');
   const [desc,setDesc] = useState('');
   const [date, setDate] = useState('');
+  
+
 
   const submit = (e)=>{
     e.preventDefault();
@@ -18,6 +19,8 @@ const AddTodo = (props) => {
       setTitle('');
       setDesc(''); 
       setDate('') ;
+
+      
     }
     
   }  
@@ -45,6 +48,7 @@ const AddTodo = (props) => {
         </div>
         <button type="submit" className="btn btn-success btn-sm">Add Todo</button>
       </form>
+      
     </div>
   )
 }
