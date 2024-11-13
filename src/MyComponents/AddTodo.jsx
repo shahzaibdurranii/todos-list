@@ -27,7 +27,7 @@ const AddTodo = (props) => {
 
   return (
     <div className='container my-3'>
-      <h3 className='text-center '>Add Todo</h3>
+      <h3 className='text-center'>Add Todo</h3>
       <form onSubmit={submit}>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">Todo Title</label>
